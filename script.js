@@ -1,9 +1,9 @@
 var inputs = document.querySelectorAll("input");
 
-inputs.forEach(input => input.addEventListener("change", handleUpdate));
-inputs.forEach(input => input.addEventListener("mousemove", handleUpdate));
+inputs.forEach(input => input.addEventListener("change", inputUpdate));
+inputs.forEach(input => input.addEventListener("mousemove", inputUpdate));
 
-function handleUpdate() {
+function inputUpdate() {
     var suffix = this.dataset.sizing || "";
     document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);
 }

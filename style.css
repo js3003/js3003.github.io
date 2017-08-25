@@ -1,8 +1,8 @@
 body {
+    min-width: 600px;
     font-family: 'helvetica neue', sans-serif;
     font-weight: 100;
-    font-size: 3vw;
-    line-height: 4vw;
+    font-size: 4vw;
 }
 
 .container {
@@ -12,10 +12,19 @@ body {
 }
 
 .controls {    
+    position: fixed;
     width: 40%;
+    min-height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center; 
+    overflow: auto; 
     box-sizing: border-box;
     text-align: left;
-    padding: 20px;
+    padding: 20px 0 20px 20px;
     font-size: 2vw;
 }
 
@@ -30,15 +39,21 @@ body {
     justify-content: center; 
     overflow: auto; 
     box-sizing: border-box;
-    padding: 0 20px;
+    padding: 20px;
 }
 
 img {
     display: block;
+    max-height: 90vh;
+    max-width: 90vh;
 }
 
 input {
     width:140px;
+}
+
+label {
+    line-height: 40px;
 }
 
 ____
@@ -64,6 +79,16 @@ img {
 
 .hl {
     color: var(--base, #008C8C);
-    filter: hue-rotate(180deg) invert(100%);
+    filter: hue-rotate(180deg) invert(100%) contrast(140%);
+}
+
+@media(max-width: 890px) {
+    .container {
+        flex-direction: column;
+    }
+    
+    .controls {
+        font-size: 16px;
+    }
 }
 
