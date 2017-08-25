@@ -1,32 +1,40 @@
 body {
-    box-sizing: border-box;
     font-family: 'helvetica neue', sans-serif;
     font-weight: 100;
-    font-size: 3rem;
-    line-height: 4rem;
+    font-size: 3vw;
+    line-height: 4vw;
 }
 
-.controls {
-    float: left;
+.container {
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+}
+
+.controls {    
     width: 40%;
     box-sizing: border-box;
     text-align: left;
     padding: 20px;
-    font-size: 2rem;
+    font-size: 2vw;
 }
 
-.image {
-    float: left;
+.image { 
+    position: fixed;
     width: 60%;
+    height: 100%;
+    top: 0;
+    left: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    overflow: auto; 
+    box-sizing: border-box;
+    padding: 0 20px;
 }
 
 img {
     display: block;
-    margin: auto;
-    box-sizing: border-box;
-    max-width: 100%;
-    max-height: 100%;
-    padding: 10px;
 }
 
 input {
@@ -36,7 +44,7 @@ input {
 ____
 
 :root {
-    --base: #eeeeee;
+    --base: #008C8C;
     --spacing: 50%;
     --blur: 0px;
     --invert: 0%;
@@ -46,11 +54,16 @@ ____
 }
 
 body {
-    background-color: var(--base, #eeeeee);
+    background-color: var(--base, #008C8C);
 }
 
 img {
     width: var(--spacing, 50%);
-    height: var(--spacing, 50%);
     filter: blur(var(--blur, 0px)) invert(var(--invert, 0%)) sepia(var(--sepia, 0%))  saturate(var(--saturate, 100%)) hue-rotate(var(--hue-rotate, 0deg));
 }
+
+.hl {
+    color: var(--base, #008C8C);
+    filter: hue-rotate(180deg) invert(100%);
+}
+
