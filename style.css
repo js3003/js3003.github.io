@@ -53,6 +53,7 @@ input {
 }
 
   input[type="color"] {
+    -webkit-appearance: none;
     border: none;
     width: 140px;
     height: 140px;
