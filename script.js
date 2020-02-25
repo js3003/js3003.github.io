@@ -7,3 +7,9 @@ function inputUpdate() {
     var suffix = this.dataset.sizing || "";
     document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);
 }
+
+const colorpicker = document.querySelector(".colorpicker");
+const img = colorpicker.querySelector("img");
+if(img) {
+  img.style.display = 'none';
+}
